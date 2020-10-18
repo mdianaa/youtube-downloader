@@ -1,6 +1,5 @@
 from pytube import YouTube
 
-
 class YoutubeDownloader:
 
     @staticmethod
