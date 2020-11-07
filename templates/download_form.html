@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block download_form %}
+
+    <form action="" method="post"  novalidate>
+        {{ download_form.csrf_token }}
+        {{ download_form.name}}
+        <p>
+            {{ download_form.url.label }}
+            {{ download_form.url(size=50, type="url") }}
+            {% if download_form.url.errors %}
+                {% for error in download_form.url.errors %}
+                <span id="error" style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            {% endif %}
+
+        </p>
+        <p>{{ download_form.is_playlist() }} {{ download_form.is_playlist.label }}</p>
+        <p>{{ download_form.audio_only(id="audio_only", onclick="show_hidden_fields(this)") }} {{ download_form.audio_only.label }}</p>
+        <p>{{ download_form.highest_resolution(class="hidden_element") }} {{ download_form.highest_resolution.label(class="hidden_element")}}</p>
+        <p>{{ download_form.submit(id="submit") }}</p>
+    </form>
+
+{% endblock %}

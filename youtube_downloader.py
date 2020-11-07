@@ -1,11 +1,8 @@
 from YoutubeDownloader import YoutubeDownloader
 from YoutubePlaylist import YoutubePlaylist
 from os import path
-from flask import Flask
 
-# url = str(input('Please specify youtube video URL:'))
-url = 'https://www.youtube.com/watch?v=iP6XpLQM2Cs&list=PLJatGb3hWsyhUwI8SGxCo7OV4iCB0yFEW&index=1'
-#url = 'https://www.youtube.com/watch?v=Q97c5szTgIA'
+url = ''
 
 download_location = str(input("Specify download directory(full path). Press Enter to download in current directory:"))
 if download_location != '' and not path.exists(download_location):
