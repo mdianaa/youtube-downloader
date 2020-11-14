@@ -15,8 +15,8 @@
             {% endif %}
 
         </p>
-        <p>{{ download_form.is_playlist() }} {{ download_form.is_playlist.label }}</p>
-        <p>{{ download_form.audio_only(id="audio_only", onclick="show_hidden_fields(this)") }} {{ download_form.audio_only.label }}</p>
+        <p>{{ download_form.is_playlist() }} {{ download_form.is_playlist.label }} <span id="zip_file_info">(Playlists are downloaded as .zip files)</span></p>
+        <p>{{ download_form.is_video(id="is_video", onclick="show_hidden_fields(this)") }} {{ download_form.is_video.label }}</p>
         <p>{{ download_form.highest_resolution(class="hidden_element") }} {{ download_form.highest_resolution.label(class="hidden_element")}}</p>
         <p>{{ download_form.submit(id="submit") }}</p>
     </form>

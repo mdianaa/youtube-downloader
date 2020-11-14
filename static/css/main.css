@@ -16,3 +16,6 @@ body {
 h1, h3, p {
     color: white;
 }
+#zip_file_info {
+    font-size: 12px;
+}
